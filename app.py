@@ -17,10 +17,10 @@ def initialize_session_state():
         st.session_state['history'] = []
 
     if 'generated' not in st.session_state:
-        st.session_state['generated'] = ["Hello! Ask me anything about 🤗"]
+        st.session_state['generated'] = ["Hallo! Frag mich alles über 🤗"]
 
     if 'past' not in st.session_state:
-        st.session_state['past'] = ["Hey! 👋"]
+        st.session_state['past'] = ["Moin! Moin! 👋"]
 
 def conversation_chat(query, chain, history):
     result = chain({"question": query, "chat_history": history})
